@@ -1,0 +1,39 @@
+.homeRoot {
+  .title {
+    margin: 120px 0 40px 0;
+    width: 100%;
+    text-align: center;
+    .titleH1 {
+      width: 730px;
+      color: #222930;
+      margin: 0 auto;
+      font-family: Inter;
+      font-size: 34px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 48px; /* 141.176% */
+    }
+    .titleP {
+      width: 730px;
+      margin: 0 auto;
+      color: #222930;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px; /* 162.5% */
+    }
+  }
+  .SearchTagT {
+    margin: auto 10px;
+    p {
+      margin-bottom: 0;
+      color: #222930;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}

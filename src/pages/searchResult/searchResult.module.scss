@@ -1,0 +1,17 @@
+.root {
+  margin-top: 50px;
+  .main {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    .filter {
+      width: 32%;
+      .left {
+      }
+    }
+    .top {
+      .right {
+      }
+    }
+  }
+}

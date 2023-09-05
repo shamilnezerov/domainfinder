@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Penumbra Sans Std";
+  src: url("../fonts/PenumbraSansStd-Bold.woff") format("woff"), 
+  url("../fonts/PenumbraSansStd-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Penumbra Sans Std";
+  src: url("../fonts/PenumbraSansStd-Regular.woff") format("woff"), 
+  url("../fonts/PenumbraSansStd-Regular.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Penumbra Sans Std";
+  src: url("../fonts/PenumbraSansStd-Semibold.woff") format("woff"), 
+  url("../fonts/PenumbraSansStd-Semibold.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Inter Regular'), url('../fonts/Inter-Regular.woff') format('woff');
+  }  
+
+  @font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inter Medium'), url('../fonts/Inter-Medium.woff') format('woff');
+  }
+  
+  @font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Inter Semi Bold'), url('../fonts/Inter-SemiBold.woff') format('woff');
+  }
+  
+  @font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Inter Bold'), url('../fonts/Inter-Bold.woff') format('woff');
+  }
+
+  @font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Inter Extra Bold'), url('../fonts/Inter-ExtraBold.woff') format('woff');
+  }

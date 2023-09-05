@@ -1,0 +1,81 @@
+//.root {
+//  width: 100%;
+//  display: flex;
+//  flex-wrap: wrap;
+//  justify-content: space-between;
+//  padding-top: 20px;
+//  align-items: center;
+//  .logo {
+//    a {
+//      color: #222930;
+//      font-family: Penumbra Sans Std;
+//      font-size: 24px;
+//      font-style: normal;
+//      font-weight: 700;
+//      line-height: 32px; /* 133.333% */
+//    }
+//  }
+//  .nav {
+//    a {
+//      margin-left: 50px;
+//      color: #222930;
+//      text-align: right;
+//      font-family: Inter;
+//      font-size: 18px;
+//      font-style: normal;
+//      font-weight: 500;
+//      line-height: 32px;
+//    }
+//  }
+//}
+
+.root {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 20px;
+  align-items: center;
+
+  .logo {
+    a {
+      color: #222930;
+      font-family: Penumbra Sans Std;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 32px; /* 133.333% */
+    }
+  }
+
+  .nav {
+    a {
+      margin-left: 50px;
+      color: #222930;
+      text-align: right;
+      font-family: Inter;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 32px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .root {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .logo {
+      a {
+        margin-bottom: 20px;
+      }
+    }
+
+    .nav {
+      display: none;
+    }
+  }
+}

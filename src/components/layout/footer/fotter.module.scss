@@ -1,0 +1,35 @@
+.footer {
+  background: #fff;
+  padding: 30px 0;
+  .main {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    .left {
+      display: flex;
+      align-items: center;
+      img {
+      }
+      .title {
+        display: flex;
+        .button{
+          font-size: 34px;
+          background-color: black !important;
+          width: 60px;
+        }
+        a {
+          color: #64626a;
+          font-family: Inter;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-bottom: 0;
+          cursor: pointer;
+        }
+      }
+    }
+    .lang {
+    }
+  }
+}

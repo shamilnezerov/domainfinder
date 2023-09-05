@@ -1,0 +1,55 @@
+.root {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+
+  .resources {
+    display: flex;
+    align-items: center;
+    border: 1px solid #52ab84;
+    border-radius: 4px 0 0 4px;
+
+    p {
+      color: #222930;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 150% */
+      margin: 0;
+      padding: 10px;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+  }
+  .search {
+    position: relative;
+
+    .searchimp {
+      width: 600px;
+      height: 50px;
+      padding: 18px;
+      flex-shrink: 0;
+      border-radius: 0 4px 4px 0;
+      border: 1px solid #52ab84;
+      background: #fff;
+      border-left: none;
+    }
+
+    .searchIcon {
+      position: absolute;
+      right: 18px;
+      top: 14px;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      color: #000000;
+    }
+  }
+}

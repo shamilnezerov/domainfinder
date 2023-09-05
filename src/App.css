@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+}
+a {
+  color: #222930 !important;
+}
