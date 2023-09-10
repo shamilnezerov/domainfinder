@@ -23,9 +23,6 @@ function Searcharesult(props) {
 
           <div className={Stayles.right}>
             <SearchResultComp />
-            {/*<SearchResultComp />*/}
-            {/*<SearchResultComp />*/}
-            {/*<SearchResultComp />*/}
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Table, Form, Button } from "react-bootstrap";
 import { AddData, DeleteData, EditData } from "../redux/actions";
 import { useSelector, useDispatch } from "react-redux";
+import axios from "axios";
 
 const Admin = () => {
   const [title, setTitle] = useState("");
@@ -9,29 +10,68 @@ const Admin = () => {
   const [url, setUrl] = useState("");
   const [id, setId] = useState(undefined);
 
+  useEffect(() => {
+    getData();
+  }, []);
+
   const dispatch = useDispatch();
 
-  const myProducts = useSelector((state) => state.myProducts);
+  // const myProducts = useSelector((state) => state.myProducts);
 
-  const SaveData = () => {
+  const [myProducts, setMyProducts] = useState([]);
+  const getData = async () => {
+    await axios
+      .get("http://localhost:3000/products")
+      .then((respons) => {
+        setMyProducts(respons.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        console.log("process finished");
+      });
+  };
+
+  const SaveData = async () => {
     if (title.trim() !== "" && description.trim() !== "" && url.trim() !== "") {
       if (!id) {
-        dispatch(
-          AddData({
+        await axios
+          .post("http://localhost:3000/products", {
             title,
             description,
             url,
-          }),
-        );
+          })
+          .then(() => {
+            getData();
+          });
+
+        // dispatch(
+        //   AddData({
+        //     title,
+        //     description,
+        //     url,
+        //   }),
+        // );
       } else {
-        dispatch(
-          EditData({
-            id,
+        await axios
+          .put(`http://localhost:3000/products/${id}`, {
             title,
             description,
             url,
-          }),
-        );
+          })
+          .then(() => {
+            getData();
+          });
+
+        // dispatch(
+        //   EditData({
+        //     id,
+        //     title,
+        //     description,
+        //     url,
+        //   }),
+        // );
       }
     }
     CancelFunc();
@@ -42,6 +82,13 @@ const Admin = () => {
     setId(undefined);
     setDescription("");
     setUrl("");
+  };
+  const deleteFunction = async (deleteId) => {
+    await axios
+      .delete(`http://localhost:3000/products/${deleteId}`)
+      .then(() => {
+        getData();
+      });
   };
 
   const setEditing = (id) => {
@@ -89,7 +136,8 @@ const Admin = () => {
                         <Button
                           variant="danger"
                           onClick={() => {
-                            dispatch(DeleteData(product.id));
+                            deleteFunction(product.id);
+                            // dispatch(DeleteData(product.id));
                           }}
                         >
                           Delete

@@ -1,12 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import styles from "./searchResultComp.module.scss";
 import icon from "../../assets/img/ico.png";
 import ricon from "../../assets/img/Alexa_Internet_logo 1.png";
 import SearchTag from "../SearchTag/SearchTag";
 import { Link } from "react-router-dom";
+import axios from "axios";
 function SearchResultComp(props) {
-  const myProducts = useSelector((state) => state.myProducts);
+  // const myProducts = useSelector((state) => state.myProducts);
+
+  const [myProducts, setMyProducts] = useState([]);
+  const getData = async () => {
+    await axios
+      .get("http://localhost:3000/products")
+      .then((response) => {
+        setMyProducts(response.data);
+      })
+      .catch((error) => {
+        console.log(error.rresponse);
+      })
+      .finally(() => {
+        console.log("process finished");
+      });
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   const data = [
     {
